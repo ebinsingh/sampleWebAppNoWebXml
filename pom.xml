@@ -11,7 +11,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jdk.version>1.7.0_75</jdk.version>
-		<spring.version>4.2.3.RELEASE</spring.version>
+		<spring.version>5.3.0</spring.version>
 		<mysql.driver.version>5.1.33</mysql.driver.version>
 		<junit.version>4.11</junit.version>
 		<hibernate.version>4.3.6.Final</hibernate.version>
