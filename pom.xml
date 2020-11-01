@@ -13,7 +13,7 @@
 		<jdk.version>1.7.0_75</jdk.version>
 		<spring.version>4.2.3.RELEASE</spring.version>
 		<mysql.driver.version>5.1.33</mysql.driver.version>
-		<junit.version>4.11</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<hibernate.version>4.3.6.Final</hibernate.version>
 		<org.springframework-version>4.0.0.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.7.4</org.aspectj-version>
