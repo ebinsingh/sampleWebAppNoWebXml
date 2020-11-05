@@ -2,9 +2,9 @@ package com.ebenezer.webapp.config;
 
 import javax.sql.DataSource;
 
-import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -36,12 +36,12 @@ public class DataSourceConfig {
 	
 	@Bean
 	public DataSource dataSource() {
-		BasicDataSource dataSource = new BasicDataSource();
-		dataSource.setDriverClassName(driverClassName);
-		dataSource.setUrl(url);
-		dataSource.setUsername(username);
-		dataSource.setPassword(password);
-		return dataSource;
+		DataSourceBuilder<?> dataSource = DataSourceBuilder.create();
+		dataSource.driverClassName(driverClassName);
+		dataSource.url(url);
+		dataSource.username(username);
+		dataSource.password(password);
+		return dataSource.build();
 	}
 
 	@Bean
@@ -52,6 +52,8 @@ public class DataSourceConfig {
 		vendor.setGenerateDdl(Boolean.valueOf(generateDDL));
 		vendor.setShowSql(true);
 		vendor.setGenerateDDLType(generateDDLType);
+		vendor.setShowSql(true);
+		vendor.getJpaPropertyMap().put("hibernate.id.new_generator_mappings", "false");
 		
 		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
 		factory.setJpaVendorAdapter(vendor);

@@ -15,7 +15,7 @@ public class Customer implements Serializable {
 
 	@Id
 	@Column(name="CUSTOMER_ID")
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int customerId;
 
 	private double age;

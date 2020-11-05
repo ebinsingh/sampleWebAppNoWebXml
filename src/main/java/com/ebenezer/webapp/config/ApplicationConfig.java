@@ -10,7 +10,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@Import({ApplicationScanner.class, PropertyConfig.class, PropertySourceConfig.class, DataSourceConfig.class})
+@Import({ApplicationScanner.class, DataSourceConfig.class})
 public class ApplicationConfig extends WebMvcConfigurerAdapter{
 	
 	@Override
